@@ -1,0 +1,84 @@
+<div class="table-responsive">
+  <form method="post" action='/projects/user/edit'>
+    <table class="table table-responsive">
+      <tbody>
+        <tr>
+          <th>Project Description: </td>
+          <td><input type="text" name="projectDesc" required size="40" value="{{data.projectDescription}}"></td>
+        </tr>
+        <tr>
+          <th>Budget Year: </td>
+          <td><input type="text" name="budgetY" required size="40" value="{{data.budgetYear}}"></td>
+        </tr>
+        <tr>
+          <th>Budget Amount: </td>
+          <td><input type="text" name="budgetA" required size="40" value="{{data.budgetAmount}}"></td>
+        </tr>
+        <tr>
+          <th>Asset Class: </td>
+          <td>
+            <select name="assetC" required>
+              {{#if ("Computer")}}
+              Select Department
+              {{/if}}
+              {{#if ("Software")}}Software{{/if}}
+              <option value="{{data.assetC}}">Select Asset Class</option>
+              <option value="Computer Hardware">Hardware</option>
+              <option value="Software">Software</option>
+              <option value="Office Furniture">Office Furniture</option>
+              <option value="Office Equipment">Office Equipment</option>
+              <option value="Leasehold Improvement">Leasehold Improvement</option>
+              {{!-- <input type="text" name="assetC" required size="40" value="{{data.assetC}}"> --}}
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Department: </td>
+          <td>
+            <select id="department" name="depart">
+              <option value="">Select Department</option>
+              <option value="Human Resources">HR</option>
+              <option value="Accounting">Accounting</option>
+              <option value="Finance">Finance</option>
+              <option value="Professional Services">Professional Services</option>
+              <option value="Information Technology">IT</option>
+              <option value="Corporate Server">Corporate Server</option>
+              <option value="Network Operation">Network Operation</option>
+              <option value="R&D">Research and Development</option>
+              <option value="Facility">Facility</option>
+            </select>
+            {{!-- <input type="text" name="depart" required size="40" value="{{data.department}}"> --}}
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Business Detail:</td>
+          <td><input type="text" name="bussinessJ" required size="40" value="{{data.businessJustification}}"></td>
+        </tr>
+        <tr>
+          <th>Requestor:</td>
+          <td><input type="text" name="reqName" required size="40" value="{{data.requestor}}"></td>
+        </tr>
+        <tr>
+          <th>Status:</td>
+          <td><input type="text" name="stat" required size="40" value="{{data.status}}" disabled></td>
+        </tr>
+        <tr>
+          <th>Actual Spending:</td>
+          <td><input type="text" name="actualC" required size="40" value="{{data.actualSpending}}"></td>
+        </tr>
+        <input type="hidden" name="id" value="{{data.id}}">
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Save" class="btn btn-success">
+            <input type="button" value="Cancel" class="btn btn-danger" class="cancel" onclick="cancelAddUser()">
+          </td>
+        </tr>
+
+      </tfooter>
+    </table>
+  </form>
+</div>

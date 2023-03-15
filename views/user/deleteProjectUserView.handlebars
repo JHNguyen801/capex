@@ -1,0 +1,63 @@
+<div class="table-responsive">
+  <form method="post" action='/projects/user/delete'>
+    <table class="table table-responsive">
+      <tbody>
+        {{!-- <tr>
+          <th>Budget Number </td>
+          <td>{{data.budgN}}</td>
+        </tr> --}}
+        <tr>
+          <th>Project Description </td>
+          <td>{{data.projectDescription}}</td>
+        </tr>
+        <tr>
+          <th>Budgt Year </td>
+          <td>{{data.budgetYear}}</td>
+        </tr>
+        <tr>
+          <th>Budget Amount </td>
+          <td>{{data.budgetAmount}}</td>
+        </tr>
+        <tr>
+          <th>Asset Class </td>
+          <td>{{data.assetClass}}</td>
+        </tr>
+        <tr>
+          <th>Department </td>
+          <td>{{data.department}}</td>
+        </tr>
+        <tr>
+          <th>Bussiness Justification </td>
+          <td>{{data.businessJustification}}</td>
+        </tr>
+        <tr>
+          <th>Requestor </td>
+          <td>{{data.requestor}}</td>
+        </tr>
+        <tr>
+          <th>Status </td>
+          <td>{{data.status}}</td>
+        </tr>
+        <tr>
+          <th>Actual </td>
+          <td>{{data.actualSpending}}</td>
+        </tr>
+        {{!-- <tr>
+          <th>Remaining Budget </td>
+          <td>{{data.remaining}}</td>
+        </tr> --}}
+        <input type="hidden" name="id" value="{{data.id}}">
+
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="OK" class="btn btn-success">
+            <input type="button" value="Cancel" class="btn btn-danger" class="cancel" onclick="cancelDeleteUser()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+</div>

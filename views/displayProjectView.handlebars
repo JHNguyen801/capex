@@ -1,0 +1,51 @@
+<div>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			{{#if query}}
+			<p>Search results for "{{query}}"</p>
+			{{/if}}
+			{{#if data}}
+
+			<thead>
+				<tr>
+					<th>Budget Number </th>
+					<th>Project Description </th>
+					<th>Budget Year</th>
+					<th>Budget Amount</th>
+					<th>Asset Class</th>
+					<th>Department</th>
+					<th>Business Justification</th>
+					<th>Requestor</th>
+					<th>Status: </th>
+					<th>Actual Spending</th>
+					<th>Remaining Budget</th>
+				</tr>
+			</thead>
+			{{else}}
+			<tr>
+				<td colspan="3">No data found ... Add One!</td>
+			</tr>
+			{{/if}}
+			<tbody>
+				{{#each data}}
+				<tr>
+					<td>{{this.budgetNumber}}</td>
+					<td>{{this.projectDescription}}</td>
+					<td>{{this.budgetYear}}</td>
+					<td>{{this.budgetAmount}}</td>
+					<td>{{this.assetClass}}</td>
+					<td>{{this.department}}</td>
+					<td>{{this.businessJustification}}</td>
+					<td>{{this.requestor}}</td>
+					<td>{{this.status}}</td>
+					<td>{{this.actualSpending}}</td>
+					<td>{{this.remainingBudget}}</td>
+					</td>
+				</tr>
+				{{/each}}
+			</tbody>
+			<tfooter>
+			</tfooter>
+		</table>
+	</div>
+</div>

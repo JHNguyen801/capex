@@ -1,0 +1,92 @@
+<div class="table-responsive">
+  <form method="post" action="/projects/admin/add">
+    <table class="table table-responsive">
+      <tbody>
+        <tr>
+          {{!-- <th>Budget Number: </th> --}}
+          <td><input type="hidden" name="budgN"></td>
+        </tr>
+        <tr>
+          <th>Project Description: </th>
+          <td><input type="text" name="projectDesc" required placeholder="Project Description"></td>
+        </tr>
+        <tr>
+          <th>Budget Year: </th>
+          <td><input type="number" name="budgetY" required placeholder="Enter budget year"></td>
+        </tr>
+        <tr>
+          <th>Budget Amount: </th>
+          {{!-- <td><input type="text" name="budgetA" required placeholder="Enter budget request"></td> --}}
+          <td><input type="text" name="budgetA" id="budgetAmount" required placeholder="Enter budget request"></td>
+        </tr>
+        <tr>
+          <th>Asset Class: </th>
+          <td>
+            <select id="asset-class" name="assetC">
+              <option value="">Select Asset Class</option>
+              <option value="Computer Hardware">Hardware</option>
+              <option value="Software">Software</option>
+              <option value="Office Furniture">Office Furniture</option>
+              <option value="Office Equipment">Office Equipment</option>
+              <option value="Leasehold Improvement">Leasehold Improvement</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Department: </th>
+          <td>
+            <select id="department" name="depart">
+              <option value="">Select Department</option>
+              <option value="Human Resources">HR</option>
+              <option value="Accounting">Accounting</option>
+              <option value="Finance">Finance</option>
+              <option value="Professional Services">Professional Services</option>
+              <option value="Information Technology">IT</option>
+              <option value="Corporate Server">Corporate Server</option>
+              <option value="Network Operation">Network Operation</option>
+              <option value="R&D">Research and Development</option>
+              <option value="Facility">Facility</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Business Detail: </th>
+          <td><input type="text" name="bussinessJ" required placeholder="Enter project detail"></td>
+        </tr>
+        <tr>
+          <th>Requestor: </th>
+          <td><input type="text" name="reqName" required placeholder="Enter last name"></td>
+        </tr>
+        <tr>
+          <th>Status: </th>
+          <td>
+            <select id="status" name="stat">
+              <option value="">Select Status</option>
+              <option value="Submitted">Submitted</option>
+              <option value="Reviewing">Reviewing</option>
+              <option value="Approved">Approved</option>
+              <option value="Denied">Denied</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Actual Spending: </th>
+          <td><input type="text" name="actualC" placeholder="Please enter spending"></td>
+        </tr>
+        <tr>
+          {{!-- <th>Remaining Budget: </th> --}}
+          <td><input type="hidden" name="remaining"></td>
+        </tr>
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Save" class="btn btn-success">
+            <input type="button" value="Cancel" class="btn btn-danger" onclick="cancelAddAdmin()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+</div>
